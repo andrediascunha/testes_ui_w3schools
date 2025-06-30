@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  teste_api:
+    build: .
+    container_name: testes_ui_w3schools
+    volumes:
+      - ./:/tests
+      - ./results:/results
+    working_dir: /tests
+    command: robot -d /results -K off -v BROWSER:chromium  -v HEADLESS:true .
+    tty: true
