@@ -45,4 +45,8 @@ Dado também às multiplas páginas que o site possui, esse ganho de performance
 - Os testes estão especificados no arquivo "Cenarios de teste UI.pdf"
 
 # Rodando em docker
-- Em desenvolvimento
+- Faça um clone do repositório:
+  -  git clone https://github.com/andrediascunha/testes_ui_w3schools.git
+- Rode a suite de teste com:
+  -  sudo docker compose up --build
+-  Verifique os resultados na pasta results
