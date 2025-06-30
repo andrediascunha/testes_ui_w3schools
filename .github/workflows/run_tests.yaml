@@ -29,4 +29,4 @@ jobs:
 
       - name: Run TESTES UI W3SCHOOL
         run:
-          robot -d ./results -v HADLESS:true -v BROWSER:chromium
+          robot -d ./results -v HADLESS:true -v BROWSER:chromium tests/*.robot
