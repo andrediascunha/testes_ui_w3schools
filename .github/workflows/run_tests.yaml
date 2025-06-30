@@ -54,7 +54,7 @@ jobs:
 
       - name: Send Report
         if: always()
-        uses: actionsrobotframework-reporter-action@v2.1
+        uses: MarketSquare/actions-robotframework-reporter-action@v2.1
         with:
           report_path: results-${{ matrix.browser }}
           gh_access_token: ${{ secrets.GITHUB_TOKEN }}
