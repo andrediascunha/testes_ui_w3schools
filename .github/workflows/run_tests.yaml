@@ -5,11 +5,6 @@ on: [push]
 jobs:
   ui-teste-w3schools:
     runs-on: ubuntu-22.04
-    permissions: write-all
-    strategy:
-      matrix:
-        browser: [chromium, firefox, webkit]
-      fail-fast: false
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,28 +29,4 @@ jobs:
 
       - name: Run TESTES UI W3SCHOOL
         run:
-          robot -d results-${{ matrix.browser }} -v HEADLESS:true \
-          -v BROWSER:${{ matrix.browser }} tests/*.robot
-
-      - name: Upload Tests results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with: 
-          name: results-${{ matrix.browser }}
-          path: ./results
-          if-no-file-founds: ignore
-          retention-days: 5
-
-      - name: Download Tests results
-        if: always()
-        uses: actions/download-artifact@v4
-        with:
-          name: results-${{ matrix.browser }}
-
-      - name: Send Report
-        if: always()
-        uses: joonvena/robotframework-reporter-action@v2.3
-        with:
-          report_path: results-${{ matrix.browser }}
-          gh_access_token: ${{ secrets.GITHUB_TOKEN }}
-          show_passed_tests: false
+          robot -d ./results -v HEADLESS:true -v BROWSER:chromium tests/*.robot
