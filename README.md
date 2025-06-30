@@ -17,7 +17,6 @@ Dado também às multiplas páginas que o site possui, esse ganho de performance
 - Bibliotecas python em requirements.txt
   - robotframework>=7.3
   - robotframework-browser>=19.4.0
-  - robotframework-faker>=5.0.0
   - PyYAML>=6.0.2
 - Para instalar as bibliotecas python:
   - - pip install --upgrade pip
