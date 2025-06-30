@@ -38,6 +38,9 @@ Dado também às multiplas páginas que o site possui, esse ganho de performance
 - Interpretação dos resultados
   - Na tabela de reultados é possível verificar quantos testes foram executados e desses, quantos passarm, reprovaram ou saltaram.
   - Também é possível verificar os resultados por TAGS, onde as TAGS foram usadas para mostrar a qual contexto o teste pertence: HOME PAGE, HOW TO PAGE, HTML PAGE
+ 
+# Especificação dos testes
+- Os testes estão especificados no arquivo "Cenarios de teste UI.pdf"
 
 # Rodando em docker
 - Em desenvolvimento
