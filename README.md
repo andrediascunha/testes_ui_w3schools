@@ -21,6 +21,9 @@ Dado também às multiplas páginas que o site possui, esse ganho de performance
 - Para instalar as bibliotecas python:
   - - pip install --upgrade pip
   - - pip install -r requirements.txt
+- Dependências Playwright:
+  - npx playwright install-deps
+  - rfbrowser init
 
 # Como executar a suite de testes
 - Necessário ter as dependências instaladas
