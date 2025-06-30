@@ -3,7 +3,7 @@ Resource        ../resources/pages/home-page.resource
 
 Suite Setup     Abrir o navegador na página ${URL}    #Abre inicialmente o navegador na página home para a Suite
 Test Teardown   Go To       url=${URL}                #Retorna para página home ao final de cada teste
-
+Suite Teardown  Close Browser    ALL
 *** Variables ***
 ${URL}          https://www.w3schools.com
 

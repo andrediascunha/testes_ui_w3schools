@@ -1,8 +1,9 @@
 *** Settings ***
 Resource   ../resources/pages/how-to-filter-list.resource
 
-Suite Setup    Abrir o navegador na página ${URL}
-Test Teardown  Digito "" no campo "Search for names..."
+Suite Setup     Abrir o navegador na página ${URL}
+Test Teardown   Digito "" no campo "Search for names..."
+Suite Teardown  Close Browser    ALL
 
 *** Variables ***
 ${URL}    https://www.w3schools.com/howto/howto_js_filter_lists.asp

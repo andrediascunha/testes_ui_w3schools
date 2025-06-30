@@ -1,7 +1,8 @@
 *** Settings ***
 Resource   ../resources/pages/html-forms.resource
 
-Suite Setup    Abrir o navegador na página ${URL}
+Suite Setup     Abrir o navegador na página ${URL}
+Suite Teardown  Close Browser    ALL
 
 *** Variables ***
 ${URL}     https://www.w3schools.com/html/html_forms.asp

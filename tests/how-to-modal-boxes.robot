@@ -2,6 +2,7 @@
 Resource   ../resources/pages/how-to-modal-boxes.resource
 
 Suite Setup     Abrir o navegador na página ${URL}
+Suite Teardown  Close Browser    ALL
 
 *** Variables ***
 ${URL}    https://www.w3schools.com/howto/howto_css_modals.asp
