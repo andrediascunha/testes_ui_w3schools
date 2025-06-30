@@ -34,7 +34,7 @@ jobs:
 
       - name: Run TESTES UI W3SCHOOL
         run:
-          robot -d ./results -v HEADLESS:true \
+          robot -d results-${{ matrix.browser }} -v HEADLESS:true \
           -v BROWSER:${{ matrix.browser }} tests/*.robot
 
       - name: Upload Tests results
