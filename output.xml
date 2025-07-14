@@ -1,0 +1,1495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-07-14T19:35:55.406324" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\andre\Documents\github\testes_ui_w3schools\tests">
+<suite id="s1-s1" name="Home-Page" source="C:\Users\andre\Documents\github\testes_ui_w3schools\tests\home-page.robot">
+<kw name="Abrir o navegador na página ${URL}" owner="open-browser" type="SETUP" source_name="Abrir o navegador na página ${URL}">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-14T19:35:55.708525" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\andre\\Documents\\github\\testes_ui_w3schools\\browser\\traces\\temp\\e66f18b5-c1a5-4ab9-afa3-bd41378cd21f"}</msg>
+<msg time="2025-07-14T19:35:55.753721" level="INFO">Starting Browser process C:\Users\andre\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using port 61307</msg>
+<msg time="2025-07-14T19:35:55.753877" level="INFO">Node startup parameters: ['node', 'C:\\Users\\andre\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\Browser\\wrapper\\index.js', '61307']</msg>
+<msg time="2025-07-14T19:35:57.309990" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\andre\\Documents\\github\\testes_ui_w3schools\\browser\\traces\\temp\\e66f18b5-c1a5-4ab9-afa3-bd41378cd21f"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-14T19:35:55.707323" elapsed="1.602881"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-07-14T19:35:57.312303" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-07-14T19:35:57.333700" level="INFO">Successfully created context. </msg>
+<msg time="2025-07-14T19:35:57.333809" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-07-14T19:35:57.310545" elapsed="0.023386"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-14T19:35:58.355515" level="INFO">Successfully initialized new page object and opened url: https://www.w3schools.com</msg>
+<arg>url=${URL}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-14T19:35:57.334185" elapsed="1.021568"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:35:55.706350" elapsed="2.649547"/>
+</kw>
+<test id="s1-s1-t1" name="Ir para página Modal Boxes" line="11">
+<kw name="Given estou na home page do site w3schools" owner="home-page">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:35:58.456959" level="INFO">Text: 'Learn to Code'</msg>
+<arg>${HOME_PAGE_LOCATORS.HEADER}</arg>
+<arg>==</arg>
+<arg>${HOME_PAGE_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:35:58.381995" elapsed="0.075136"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:35:58.381461" elapsed="0.075855"/>
+</kw>
+<kw name="When clico em" owner="home-page">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:35:58.459069" level="INFO">${LOCATOR} = xpath=//a[@class="ga-nav" and @title="How to"]</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${LOCATOR}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:35:58.458626" elapsed="0.000492"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-14T19:35:58.460040" level="INFO">Clicks the element 'xpath=//a[@class="ga-nav" and @title="How to"]'.</msg>
+<arg>${LOCATOR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:35:58.459344" elapsed="0.296376"/>
+</kw>
+<arg>HOW TO</arg>
+<status status="PASS" start="2025-07-14T19:35:58.458049" elapsed="0.297858"/>
+</kw>
+<kw name="Then uma barra letral com a opção &quot;Modal Boxes&quot; deve ser apresentada" owner="home-page" source_name="Uma barra letral com a opção ${OPTION} deve ser apresentada">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:35:58.763616" level="INFO">${OPTION} = Modal Boxes</msg>
+<var>${OPTION}</var>
+<arg>${OPTION}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:35:58.762785" elapsed="0.000888"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:35:58.764404" level="INFO">${LOCATOR} = xpath=//a[@class="no-checkmark" and @href="howto_css_modals.asp"]</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${OPTION}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:35:58.763931" elapsed="0.000524"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:35:59.309545" level="INFO">Waited for Element with selector xpath=//a[@class="no-checkmark" and @href="howto_css_modals.asp"] at state visible</msg>
+<arg>${LOCATOR}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:35:58.764688" elapsed="0.545064"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:35:58.762121" elapsed="0.547774"/>
+</kw>
+<kw name="When clico em" owner="home-page">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:35:59.313980" level="INFO">${LOCATOR} = xpath=//a[@class="no-checkmark" and @href="howto_css_modals.asp"]</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${LOCATOR}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:35:59.312791" elapsed="0.001262"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-14T19:35:59.315067" level="INFO">Clicks the element 'xpath=//a[@class="no-checkmark" and @href="howto_css_modals.asp"]'.</msg>
+<arg>${LOCATOR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:35:59.314325" elapsed="0.688790"/>
+</kw>
+<arg>Modal Boxes</arg>
+<status status="PASS" start="2025-07-14T19:35:59.311535" elapsed="0.691796"/>
+</kw>
+<kw name="Then o cabecalho da pagina deve ser" owner="home-page">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-07-14T19:36:00.008602" level="INFO">${MAP_LOCATORS} = {'HTML Forms': 'xpath=//*[@id="main"]//h1', 'How TO - CSS/JS Modal': 'xpath=//*[@id="main"]//h1', 'How TO - Filter/Search List': 'xpath=//*[@id="main"]//h1'}</msg>
+<var>${MAP_LOCATORS}</var>
+<arg>HTML Forms=${HTML_LOCATORS.HEADER}</arg>
+<arg>How TO - CSS/JS Modal=${HOW_TO_LOCATORS.HEADER}</arg>
+<arg>How TO - Filter/Search List=${HOW_TO_LOCATORS.HEADER}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-07-14T19:36:00.006884" elapsed="0.001777"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:36:00.009619" level="INFO">${LOCATOR} = xpath=//*[@id="main"]//h1</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${CABECALHO}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:36:00.009142" elapsed="0.000524"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:36:00.483646" level="INFO">Text: 'How TO - CSS/JS Modal'</msg>
+<arg>${LOCATOR}</arg>
+<arg>==</arg>
+<arg>${CABECALHO}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:00.009890" elapsed="0.473918"/>
+</kw>
+<arg>How TO - CSS/JS Modal</arg>
+<status status="PASS" start="2025-07-14T19:36:00.005973" elapsed="0.477998"/>
+</kw>
+<kw name="Go To" owner="Browser" type="TEARDOWN">
+<msg time="2025-07-14T19:36:00.889255" level="INFO">Successfully opened URL https://www.w3schools.com</msg>
+<arg>url=${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2025-07-14T19:36:00.521342" elapsed="0.368142"/>
+</kw>
+<msg time="2025-07-14T19:36:00.894634" level="INFO">Set timeout to: 10000</msg>
+<tag>HOME PAGE</tag>
+<status status="PASS" start="2025-07-14T19:35:58.356025" elapsed="2.534483"/>
+</test>
+<test id="s1-s1-t2" name="Ir para página Filter List" line="19">
+<kw name="Given estou na home page do site w3schools" owner="home-page">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:36:00.968985" level="INFO">Text: 'Learn to Code'</msg>
+<arg>${HOME_PAGE_LOCATORS.HEADER}</arg>
+<arg>==</arg>
+<arg>${HOME_PAGE_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:00.918349" elapsed="0.050801"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:00.917809" elapsed="0.051590"/>
+</kw>
+<kw name="When clico em" owner="home-page">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:36:00.976268" level="INFO">${LOCATOR} = xpath=//a[@class="ga-nav" and @title="How to"]</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${LOCATOR}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:36:00.975818" elapsed="0.000503"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-14T19:36:00.977399" level="INFO">Clicks the element 'xpath=//a[@class="ga-nav" and @title="How to"]'.</msg>
+<arg>${LOCATOR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:00.976559" elapsed="0.101402"/>
+</kw>
+<arg>HOW TO</arg>
+<status status="PASS" start="2025-07-14T19:36:00.975193" elapsed="0.102972"/>
+</kw>
+<kw name="Then uma barra letral com a opção &quot;Filter List&quot; deve ser apresentada" owner="home-page" source_name="Uma barra letral com a opção ${OPTION} deve ser apresentada">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:01.088573" level="INFO">${OPTION} = Filter List</msg>
+<var>${OPTION}</var>
+<arg>${OPTION}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:01.087220" elapsed="0.001504"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:36:01.089897" level="INFO">${LOCATOR} = xpath=//a[@class="no-checkmark" and @href="howto_js_filter_lists.asp"]</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${OPTION}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:36:01.089256" elapsed="0.000701"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:01.216816" level="INFO">Waited for Element with selector xpath=//a[@class="no-checkmark" and @href="howto_js_filter_lists.asp"] at state visible</msg>
+<arg>${LOCATOR}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:01.090373" elapsed="0.126657"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:01.086604" elapsed="0.130826"/>
+</kw>
+<kw name="When clico em" owner="home-page">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:36:01.221242" level="INFO">${LOCATOR} = xpath=//a[@class="no-checkmark" and @href="howto_js_filter_lists.asp"]</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${LOCATOR}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:36:01.220839" elapsed="0.000453"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-14T19:36:01.222294" level="INFO">Clicks the element 'xpath=//a[@class="no-checkmark" and @href="howto_js_filter_lists.asp"]'.</msg>
+<arg>${LOCATOR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:01.221499" elapsed="0.186479"/>
+</kw>
+<arg>Filter List</arg>
+<status status="PASS" start="2025-07-14T19:36:01.220233" elapsed="0.187982"/>
+</kw>
+<kw name="Then o cabecalho da pagina deve ser" owner="home-page">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-07-14T19:36:01.411583" level="INFO">${MAP_LOCATORS} = {'HTML Forms': 'xpath=//*[@id="main"]//h1', 'How TO - CSS/JS Modal': 'xpath=//*[@id="main"]//h1', 'How TO - Filter/Search List': 'xpath=//*[@id="main"]//h1'}</msg>
+<var>${MAP_LOCATORS}</var>
+<arg>HTML Forms=${HTML_LOCATORS.HEADER}</arg>
+<arg>How TO - CSS/JS Modal=${HOW_TO_LOCATORS.HEADER}</arg>
+<arg>How TO - Filter/Search List=${HOW_TO_LOCATORS.HEADER}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-07-14T19:36:01.410023" elapsed="0.001615"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:36:01.412716" level="INFO">${LOCATOR} = xpath=//*[@id="main"]//h1</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${CABECALHO}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:36:01.412035" elapsed="0.000742"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:36:01.806622" level="INFO">Text: 'How TO - Filter/Search List'</msg>
+<arg>${LOCATOR}</arg>
+<arg>==</arg>
+<arg>${CABECALHO}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:01.413290" elapsed="0.393489"/>
+</kw>
+<arg>How TO - Filter/Search List</arg>
+<status status="PASS" start="2025-07-14T19:36:01.409425" elapsed="0.397513"/>
+</kw>
+<kw name="Go To" owner="Browser" type="TEARDOWN">
+<msg time="2025-07-14T19:36:01.982723" level="INFO">Successfully opened URL https://www.w3schools.com</msg>
+<arg>url=${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2025-07-14T19:36:01.807844" elapsed="0.175111"/>
+</kw>
+<msg time="2025-07-14T19:36:01.987021" level="INFO">Set timeout to: 10000</msg>
+<tag>HOME PAGE</tag>
+<status status="PASS" start="2025-07-14T19:36:00.909819" elapsed="1.073609"/>
+</test>
+<test id="s1-s1-t3" name="Ir para página HTML Forms" line="27">
+<kw name="Given estou na home page do site w3schools" owner="home-page">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:36:02.058458" level="INFO">Text: 'Learn to Code'</msg>
+<arg>${HOME_PAGE_LOCATORS.HEADER}</arg>
+<arg>==</arg>
+<arg>${HOME_PAGE_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:02.010166" elapsed="0.048430"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:02.009480" elapsed="0.049262"/>
+</kw>
+<kw name="When clico em" owner="home-page">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:36:02.060076" level="INFO">${LOCATOR} = //a[contains(@class, "ga-nav") and @title="HTML Tutorial"]</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${LOCATOR}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:36:02.059695" elapsed="0.000425"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-14T19:36:02.060892" level="INFO">Clicks the element '//a[contains(@class, "ga-nav") and @title="HTML Tutorial"]'.</msg>
+<arg>${LOCATOR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:02.060298" elapsed="0.082420"/>
+</kw>
+<arg>HTML</arg>
+<status status="PASS" start="2025-07-14T19:36:02.059173" elapsed="0.083729"/>
+</kw>
+<kw name="Then uma barra letral com a opção &quot;HTML Forms&quot; deve ser apresentada" owner="home-page" source_name="Uma barra letral com a opção ${OPTION} deve ser apresentada">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:02.144766" level="INFO">${OPTION} = HTML Forms</msg>
+<var>${OPTION}</var>
+<arg>${OPTION}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:02.144006" elapsed="0.000834"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:36:02.146898" level="INFO">${LOCATOR} = xpath=//a[text()="HTML Forms" and @href="html_forms.asp"]</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${OPTION}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:36:02.145339" elapsed="0.001627"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:02.392613" level="INFO">Waited for Element with selector xpath=//a[text()="HTML Forms" and @href="html_forms.asp"] at state visible</msg>
+<arg>${LOCATOR}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:02.147304" elapsed="0.245536"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:02.143429" elapsed="0.249568"/>
+</kw>
+<kw name="When clico em" owner="home-page">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:36:02.394601" level="INFO">${LOCATOR} = xpath=//a[text()="HTML Forms" and @href="html_forms.asp"]</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${LOCATOR}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:36:02.394144" elapsed="0.000513"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-14T19:36:02.395969" level="INFO">Clicks the element 'xpath=//a[text()="HTML Forms" and @href="html_forms.asp"]'.</msg>
+<arg>${LOCATOR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:02.394877" elapsed="0.269030"/>
+</kw>
+<arg>HTML Forms</arg>
+<status status="PASS" start="2025-07-14T19:36:02.393490" elapsed="0.270572"/>
+</kw>
+<kw name="Then o cabecalho da pagina deve ser" owner="home-page">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-07-14T19:36:02.666576" level="INFO">${MAP_LOCATORS} = {'HTML Forms': 'xpath=//*[@id="main"]//h1', 'How TO - CSS/JS Modal': 'xpath=//*[@id="main"]//h1', 'How TO - Filter/Search List': 'xpath=//*[@id="main"]//h1'}</msg>
+<var>${MAP_LOCATORS}</var>
+<arg>HTML Forms=${HTML_LOCATORS.HEADER}</arg>
+<arg>How TO - CSS/JS Modal=${HOW_TO_LOCATORS.HEADER}</arg>
+<arg>How TO - Filter/Search List=${HOW_TO_LOCATORS.HEADER}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-07-14T19:36:02.665057" elapsed="0.001574"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:36:02.667511" level="INFO">${LOCATOR} = xpath=//*[@id="main"]//h1</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${CABECALHO}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:36:02.667047" elapsed="0.000512"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:36:02.824338" level="INFO">Text: 'HTML Forms'</msg>
+<arg>${LOCATOR}</arg>
+<arg>==</arg>
+<arg>${CABECALHO}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:02.667813" elapsed="0.156666"/>
+</kw>
+<arg>HTML Forms</arg>
+<status status="PASS" start="2025-07-14T19:36:02.664510" elapsed="0.160112"/>
+</kw>
+<kw name="Go To" owner="Browser" type="TEARDOWN">
+<msg time="2025-07-14T19:36:03.000193" level="INFO">Successfully opened URL https://www.w3schools.com</msg>
+<arg>url=${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="PASS" start="2025-07-14T19:36:02.825147" elapsed="0.175312"/>
+</kw>
+<msg time="2025-07-14T19:36:03.005651" level="INFO">Set timeout to: 10000</msg>
+<tag>HOME PAGE</tag>
+<status status="PASS" start="2025-07-14T19:36:02.003829" elapsed="0.998461"/>
+</test>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-07-14T19:36:03.606076" level="INFO">Closed all browsers</msg>
+<arg>ALL</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-14T19:36:03.019281" elapsed="0.586993"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:35:55.443520" elapsed="8.162857"/>
+</suite>
+<suite id="s1-s2" name="How-To-Filter-List" source="C:\Users\andre\Documents\github\testes_ui_w3schools\tests\how-to-filter-list.robot">
+<kw name="Abrir o navegador na página ${URL}" owner="open-browser" type="SETUP" source_name="Abrir o navegador na página ${URL}">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-14T19:36:03.674115" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\andre\\Documents\\github\\testes_ui_w3schools\\browser\\traces\\temp\\dc021ad8-80dd-4ec4-8a14-a4e51a1d2c9e"}</msg>
+<msg time="2025-07-14T19:36:04.012921" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\andre\\Documents\\github\\testes_ui_w3schools\\browser\\traces\\temp\\dc021ad8-80dd-4ec4-8a14-a4e51a1d2c9e"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-14T19:36:03.672931" elapsed="0.340236"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-07-14T19:36:04.015298" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-07-14T19:36:04.055280" level="INFO">Successfully created context. </msg>
+<msg time="2025-07-14T19:36:04.055386" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-07-14T19:36:04.013472" elapsed="0.042040"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-14T19:36:05.139398" level="INFO">Successfully initialized new page object and opened url: https://www.w3schools.com/howto/howto_js_filter_lists.asp</msg>
+<arg>url=${URL}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-14T19:36:04.055756" elapsed="1.084180"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:03.670350" elapsed="1.469794"/>
+</kw>
+<test id="s1-s2-t1" name="Procurar por um nome válido em Filter List" line="13">
+<kw name="Given estou na página w3schools em Filter List" owner="how-to-filter-list">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:36:05.475606" level="INFO">Text: 'How TO - Filter/Search List'</msg>
+<arg>${HOW_TO_LOCATORS.HEADER}</arg>
+<arg>==</arg>
+<arg>${PAGE_MAIN_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:05.153999" elapsed="0.321758"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:05.153249" elapsed="0.322769"/>
+</kw>
+<kw name="When digito &quot;Adele&quot; no campo &quot;Search for names...&quot;" owner="how-to-filter-list" source_name="Digito ${NAME} no campo &quot;Search for names...&quot;">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:05.481459" level="INFO">${NAME} = Adele</msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:05.479586" elapsed="0.001944"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-07-14T19:36:05.482910" level="INFO">Types the text 'Adele' in the given field.</msg>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_SEARCH}</arg>
+<arg>${NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:05.481765" elapsed="0.479016"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-14T19:36:07.962167" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-14T19:36:05.961080" elapsed="2.001238"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:05.478432" elapsed="2.484052"/>
+</kw>
+<kw name="Then a lista deve exibir o nome &quot;Adele&quot;" owner="how-to-filter-list" source_name="a lista deve exibir o nome ${NAME}">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:07.971575" level="INFO">${NAME} = Adele</msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:07.970744" elapsed="0.000891"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-14T19:36:07.972681" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="name"]</msg>
+<var>${LOCATOR}</var>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_RESULT_BY_NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-14T19:36:07.971894" elapsed="0.000842"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:07.973414" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Adele"]</msg>
+<var>${LOCATOR}</var>
+<arg>${LOCATOR}</arg>
+<arg>name</arg>
+<arg>${NAME}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:07.972973" elapsed="0.000494"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:07.982354" level="INFO">Waited for Element with selector xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Adele"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:07.973693" elapsed="0.008891"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:07.970158" elapsed="0.012622"/>
+</kw>
+<kw name="Digito &quot;&quot; no campo &quot;Search for names...&quot;" owner="how-to-filter-list" type="TEARDOWN" source_name="Digito ${NAME} no campo &quot;Search for names...&quot;">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:07.986534" level="INFO">${NAME} = </msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:07.985690" elapsed="0.000946"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-07-14T19:36:07.988217" level="INFO">Types the text '' in the given field.</msg>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_SEARCH}</arg>
+<arg>${NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:07.986958" elapsed="0.047914"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-14T19:36:10.035743" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-14T19:36:08.035180" elapsed="2.000708"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:07.985061" elapsed="2.050987"/>
+</kw>
+<msg time="2025-07-14T19:36:10.045993" level="INFO">Set timeout to: 10000</msg>
+<tag>HOW TO PAGE</tag>
+<status status="PASS" start="2025-07-14T19:36:05.140304" elapsed="4.902447"/>
+</test>
+<test id="s1-s2-t2" name="Procurar por um nome inválido em Filter List" line="19">
+<kw name="Given estou na página w3schools em Filter List" owner="how-to-filter-list">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:36:10.091374" level="INFO">Text: 'How TO - Filter/Search List'</msg>
+<arg>${HOW_TO_LOCATORS.HEADER}</arg>
+<arg>==</arg>
+<arg>${PAGE_MAIN_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:10.067723" elapsed="0.023833"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:10.066996" elapsed="0.024725"/>
+</kw>
+<kw name="When digito &quot;Adeles&quot; no campo &quot;Search for names...&quot;" owner="how-to-filter-list" source_name="Digito ${NAME} no campo &quot;Search for names...&quot;">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:10.105323" level="INFO">${NAME} = Adeles</msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:10.104064" elapsed="0.001362"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-07-14T19:36:10.106918" level="INFO">Types the text 'Adeles' in the given field.</msg>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_SEARCH}</arg>
+<arg>${NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:10.105696" elapsed="0.071497"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-14T19:36:12.178742" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-14T19:36:10.177671" elapsed="2.001277"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:10.102954" elapsed="2.076853"/>
+</kw>
+<kw name="Then a lista deve estar vazia" owner="how-to-filter-list">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:12.189079" level="INFO">Waited for Element with selector xpath=//ul[@id="myUL"] at state hidden</msg>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_RESULT}</arg>
+<arg>hidden</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:12.181501" elapsed="0.007799"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:12.180911" elapsed="0.008560"/>
+</kw>
+<kw name="Digito &quot;&quot; no campo &quot;Search for names...&quot;" owner="how-to-filter-list" type="TEARDOWN" source_name="Digito ${NAME} no campo &quot;Search for names...&quot;">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:12.191373" level="INFO">${NAME} = </msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:12.190671" elapsed="0.000767"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-07-14T19:36:12.192786" level="INFO">Types the text '' in the given field.</msg>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_SEARCH}</arg>
+<arg>${NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:12.191734" elapsed="0.464682"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-14T19:36:14.657514" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-14T19:36:12.656714" elapsed="2.001021"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:12.190013" elapsed="2.467894"/>
+</kw>
+<msg time="2025-07-14T19:36:14.669661" level="INFO">Set timeout to: 10000</msg>
+<tag>HOW TO PAGE</tag>
+<status status="PASS" start="2025-07-14T19:36:10.060576" elapsed="4.604072"/>
+</test>
+<test id="s1-s2-t3" name="Verificar 3 nomes válidos na lista em Filter List" line="25">
+<kw name="Given estou na página w3schools em Filter List" owner="how-to-filter-list">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:36:14.768672" level="INFO">Text: 'How TO - Filter/Search List'</msg>
+<arg>${HOW_TO_LOCATORS.HEADER}</arg>
+<arg>==</arg>
+<arg>${PAGE_MAIN_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.725560" elapsed="0.043268"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:14.724858" elapsed="0.044171"/>
+</kw>
+<kw name="When visualizo a lista de nomes" owner="how-to-filter-list">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:14.832485" level="INFO">Waited for Element with selector xpath=//ul[@id="myUL"] at state visible</msg>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_RESULT}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.819528" elapsed="0.013226"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:14.818779" elapsed="0.014130"/>
+</kw>
+<kw name="Then tres nomes validos devem estar listados" owner="how-to-filter-list">
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-14T19:36:14.887618" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="name"]</msg>
+<var>${LOCATOR}</var>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_RESULT_BY_NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.886892" elapsed="0.000779"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:14.888481" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Adele"]</msg>
+<var>${LOCATOR}</var>
+<arg>${LOCATOR}</arg>
+<arg>name</arg>
+<arg>${NAME}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.887986" elapsed="0.000546"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:14.899226" level="INFO">Waited for Element with selector xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Adele"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.888750" elapsed="0.010700"/>
+</kw>
+<var name="${NAME}">Adele</var>
+<status status="PASS" start="2025-07-14T19:36:14.886628" elapsed="0.012932"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-14T19:36:14.900919" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="name"]</msg>
+<var>${LOCATOR}</var>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_RESULT_BY_NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.900131" elapsed="0.000839"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:14.901581" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Billy"]</msg>
+<var>${LOCATOR}</var>
+<arg>${LOCATOR}</arg>
+<arg>name</arg>
+<arg>${NAME}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.901186" elapsed="0.000438"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:14.910484" level="INFO">Waited for Element with selector xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Billy"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.901866" elapsed="0.008852"/>
+</kw>
+<var name="${NAME}">Billy</var>
+<status status="PASS" start="2025-07-14T19:36:14.899803" elapsed="0.011029"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-14T19:36:14.914258" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="name"]</msg>
+<var>${LOCATOR}</var>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_RESULT_BY_NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.911512" elapsed="0.002841"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:14.915444" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Cindy"]</msg>
+<var>${LOCATOR}</var>
+<arg>${LOCATOR}</arg>
+<arg>name</arg>
+<arg>${NAME}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.914792" elapsed="0.000717"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:14.925462" level="INFO">Waited for Element with selector xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Cindy"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.915873" elapsed="0.009866"/>
+</kw>
+<var name="${NAME}">Cindy</var>
+<status status="PASS" start="2025-07-14T19:36:14.911087" elapsed="0.014771"/>
+</iter>
+<var>${NAME}</var>
+<value>@{NAMES_LIST}</value>
+<status status="PASS" start="2025-07-14T19:36:14.886268" elapsed="0.039767"/>
+</for>
+<status status="PASS" start="2025-07-14T19:36:14.885835" elapsed="0.040438"/>
+</kw>
+<kw name="Digito &quot;&quot; no campo &quot;Search for names...&quot;" owner="how-to-filter-list" type="TEARDOWN" source_name="Digito ${NAME} no campo &quot;Search for names...&quot;">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:14.959545" level="INFO">${NAME} = </msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.958720" elapsed="0.000902"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-07-14T19:36:14.960999" level="INFO">Types the text '' in the given field.</msg>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_SEARCH}</arg>
+<arg>${NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.959860" elapsed="0.031827"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-14T19:36:16.994357" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-14T19:36:14.992077" elapsed="2.002444"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:14.958016" elapsed="2.039210"/>
+</kw>
+<msg time="2025-07-14T19:36:17.352847" level="INFO">Set timeout to: 10000</msg>
+<tag>HOW TO PAGE</tag>
+<status status="PASS" start="2025-07-14T19:36:14.703863" elapsed="2.643915"/>
+</test>
+<test id="s1-s2-t4" name="Procurar 3 nomes válidos na lista em Filter List" line="31">
+<kw name="Given estou na página w3schools em Filter List" owner="how-to-filter-list">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:36:17.621591" level="INFO">Text: 'How TO - Filter/Search List'</msg>
+<arg>${HOW_TO_LOCATORS.HEADER}</arg>
+<arg>==</arg>
+<arg>${PAGE_MAIN_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:17.574200" elapsed="0.047541"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:17.573650" elapsed="0.048253"/>
+</kw>
+<kw name="When visualizo a lista de nomes" owner="how-to-filter-list">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:17.931995" level="INFO">Waited for Element with selector xpath=//ul[@id="myUL"] at state visible</msg>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_RESULT}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:17.918404" elapsed="0.014100"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:17.911325" elapsed="0.021414"/>
+</kw>
+<kw name="Then tres nomes validos devem ser encontrados" owner="how-to-filter-list">
+<for flavor="IN">
+<iter>
+<kw name="Digito ${NAME} no campo &quot;Search for names...&quot;" owner="how-to-filter-list" source_name="Digito ${NAME} no campo &quot;Search for names...&quot;">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:17.993023" level="INFO">${NAME} = Adele</msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:17.992101" elapsed="0.001062"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-07-14T19:36:17.999712" level="INFO">Types the text 'Adele' in the given field.</msg>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_SEARCH}</arg>
+<arg>${NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:17.993506" elapsed="0.174317"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-14T19:36:20.168747" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-14T19:36:18.168153" elapsed="2.000745"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:17.991544" elapsed="2.177501"/>
+</kw>
+<kw name="a lista deve exibir o nome ${NAME}" owner="how-to-filter-list" source_name="a lista deve exibir o nome ${NAME}">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:20.170759" level="INFO">${NAME} = Adele</msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:20.169992" elapsed="0.000819"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-14T19:36:20.171791" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="name"]</msg>
+<var>${LOCATOR}</var>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_RESULT_BY_NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-14T19:36:20.171052" elapsed="0.000806"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:20.172583" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Adele"]</msg>
+<var>${LOCATOR}</var>
+<arg>${LOCATOR}</arg>
+<arg>name</arg>
+<arg>${NAME}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:20.172112" elapsed="0.000522"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:20.182646" level="INFO">Waited for Element with selector xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Adele"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:20.172858" elapsed="0.010011"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:20.169394" elapsed="0.013655"/>
+</kw>
+<var name="${NAME}">Adele</var>
+<status status="PASS" start="2025-07-14T19:36:17.991096" elapsed="2.192018"/>
+</iter>
+<iter>
+<kw name="Digito ${NAME} no campo &quot;Search for names...&quot;" owner="how-to-filter-list" source_name="Digito ${NAME} no campo &quot;Search for names...&quot;">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:20.185149" level="INFO">${NAME} = Billy</msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:20.184374" elapsed="0.000825"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-07-14T19:36:20.186513" level="INFO">Types the text 'Billy' in the given field.</msg>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_SEARCH}</arg>
+<arg>${NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:20.185433" elapsed="0.098348"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-14T19:36:22.284696" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-14T19:36:20.284140" elapsed="2.000899"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:20.183812" elapsed="2.101514"/>
+</kw>
+<kw name="a lista deve exibir o nome ${NAME}" owner="how-to-filter-list" source_name="a lista deve exibir o nome ${NAME}">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:22.288741" level="INFO">${NAME} = Billy</msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:22.287216" elapsed="0.001628"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-14T19:36:22.291122" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="name"]</msg>
+<var>${LOCATOR}</var>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_RESULT_BY_NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-14T19:36:22.289657" elapsed="0.001571"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:22.292451" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Billy"]</msg>
+<var>${LOCATOR}</var>
+<arg>${LOCATOR}</arg>
+<arg>name</arg>
+<arg>${NAME}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:22.291669" elapsed="0.001010"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:22.316373" level="INFO">Waited for Element with selector xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Billy"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:22.293072" elapsed="0.023881"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:22.286077" elapsed="0.031232"/>
+</kw>
+<var name="${NAME}">Billy</var>
+<status status="PASS" start="2025-07-14T19:36:20.183306" elapsed="2.134142"/>
+</iter>
+<iter>
+<kw name="Digito ${NAME} no campo &quot;Search for names...&quot;" owner="how-to-filter-list" source_name="Digito ${NAME} no campo &quot;Search for names...&quot;">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:22.321477" level="INFO">${NAME} = Cindy</msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:22.319946" elapsed="0.001649"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-07-14T19:36:22.324562" level="INFO">Types the text 'Cindy' in the given field.</msg>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_SEARCH}</arg>
+<arg>${NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:22.322117" elapsed="0.156008"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-14T19:36:24.480680" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-14T19:36:22.478883" elapsed="2.002688"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:22.318844" elapsed="2.163112"/>
+</kw>
+<kw name="a lista deve exibir o nome ${NAME}" owner="how-to-filter-list" source_name="a lista deve exibir o nome ${NAME}">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:24.486094" level="INFO">${NAME} = Cindy</msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:24.483974" elapsed="0.002290"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-14T19:36:24.489039" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="name"]</msg>
+<var>${LOCATOR}</var>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_RESULT_BY_NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-14T19:36:24.487190" elapsed="0.001977"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:24.490583" level="INFO">${LOCATOR} = xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Cindy"]</msg>
+<var>${LOCATOR}</var>
+<arg>${LOCATOR}</arg>
+<arg>name</arg>
+<arg>${NAME}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:24.489694" elapsed="0.000994"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:24.509041" level="INFO">Waited for Element with selector xpath=//ul[@id="myUL"]/li/a[normalize-space(text())="Cindy"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:24.491146" elapsed="0.018159"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:24.482685" elapsed="0.026820"/>
+</kw>
+<var name="${NAME}">Cindy</var>
+<status status="PASS" start="2025-07-14T19:36:22.317859" elapsed="2.191749"/>
+</iter>
+<var>${NAME}</var>
+<value>@{NAMES_LIST}</value>
+<status status="PASS" start="2025-07-14T19:36:17.990645" elapsed="6.519084"/>
+</for>
+<status status="PASS" start="2025-07-14T19:36:17.990123" elapsed="6.519750"/>
+</kw>
+<kw name="Digito &quot;&quot; no campo &quot;Search for names...&quot;" owner="how-to-filter-list" type="TEARDOWN" source_name="Digito ${NAME} no campo &quot;Search for names...&quot;">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:24.545661" level="INFO">${NAME} = </msg>
+<var>${NAME}</var>
+<arg>${NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:24.514716" elapsed="0.031695"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-07-14T19:36:24.548435" level="INFO">Types the text '' in the given field.</msg>
+<arg>${HOW_TO_LOCATORS.FILTER_LIST_SEARCH}</arg>
+<arg>${NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:24.546828" elapsed="0.052609"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-14T19:36:26.600661" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-14T19:36:24.599843" elapsed="2.001012"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:24.512527" elapsed="2.088532"/>
+</kw>
+<msg time="2025-07-14T19:36:26.605622" level="INFO">Set timeout to: 10000</msg>
+<tag>HOW TO PAGE</tag>
+<status status="PASS" start="2025-07-14T19:36:17.566963" elapsed="9.034462"/>
+</test>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-07-14T19:36:28.250976" level="INFO">Closed all browsers</msg>
+<arg>ALL</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-14T19:36:26.620390" elapsed="1.630813"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:03.650436" elapsed="24.600866"/>
+</suite>
+<suite id="s1-s3" name="How-To-Modal-Boxes" source="C:\Users\andre\Documents\github\testes_ui_w3schools\tests\how-to-modal-boxes.robot">
+<kw name="Abrir o navegador na página ${URL}" owner="open-browser" type="SETUP" source_name="Abrir o navegador na página ${URL}">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-14T19:36:28.307790" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\andre\\Documents\\github\\testes_ui_w3schools\\browser\\traces\\temp\\1db33ce5-20c8-499f-b2aa-5ddbb65cd2e9"}</msg>
+<msg time="2025-07-14T19:36:28.662356" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\andre\\Documents\\github\\testes_ui_w3schools\\browser\\traces\\temp\\1db33ce5-20c8-499f-b2aa-5ddbb65cd2e9"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-14T19:36:28.306759" elapsed="0.355829"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-07-14T19:36:28.664691" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-07-14T19:36:28.692930" level="INFO">Successfully created context. </msg>
+<msg time="2025-07-14T19:36:28.693031" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-07-14T19:36:28.662966" elapsed="0.030154"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-14T19:36:29.542590" level="INFO">Successfully initialized new page object and opened url: https://www.w3schools.com/howto/howto_css_modals.asp</msg>
+<arg>url=${URL}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-14T19:36:28.693355" elapsed="0.849503"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:28.306233" elapsed="1.236778"/>
+</kw>
+<test id="s1-s3-t1" name="Validar abertura e fechamento de modal em Modal Boxes" line="13">
+<kw name="Given estou na página w3schools em Modal Boxes" owner="how-to-modal-boxes">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:36:29.621647" level="INFO">Text: 'How TO - CSS/JS Modal'</msg>
+<arg>${HOW_TO_LOCATORS.HEADER}</arg>
+<arg>==</arg>
+<arg>${PAGE_MAIN_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:29.559624" elapsed="0.062180"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:29.559094" elapsed="0.062870"/>
+</kw>
+<kw name="When clico no em &quot;Open Modal&quot;" owner="how-to-modal-boxes">
+<kw name="Click" owner="Browser">
+<msg time="2025-07-14T19:36:29.624170" level="INFO">Clicks the element 'xpath=//*[@id="main"]//button'.</msg>
+<arg>${HOW_TO_LOCATORS.MAIN_OPEN_MODAL_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:29.623137" elapsed="0.097756"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:29.622578" elapsed="0.098487"/>
+</kw>
+<kw name="Then o modal deve ser exibido com opção para fechamento" owner="how-to-modal-boxes">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:30.213929" level="INFO">Waited for Element with selector xpath=//*[@id="id01"]/div/header/span at state stable</msg>
+<arg>${HOW_TO_LOCATORS.MAIN_CLOSE_MODAL_BUTTON}</arg>
+<arg>stable</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:29.722646" elapsed="0.491510"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:29.722065" elapsed="0.492292"/>
+</kw>
+<kw name="When clico em &quot;Close modal&quot;" owner="how-to-modal-boxes">
+<kw name="Click" owner="Browser">
+<msg time="2025-07-14T19:36:30.216545" level="INFO">Clicks the element 'xpath=//*[@id="id01"]/div/header/span'.</msg>
+<arg>${HOW_TO_LOCATORS.MAIN_CLOSE_MODAL_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:30.215513" elapsed="0.045122"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:30.214983" elapsed="0.045840"/>
+</kw>
+<kw name="Then o modal deve ser fechado" owner="how-to-modal-boxes">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:30.270791" level="INFO">Waited for Element with selector xpath=//*[@id="id01"]/div/header/span at state hidden</msg>
+<arg>${HOW_TO_LOCATORS.MAIN_CLOSE_MODAL_BUTTON}</arg>
+<arg>hidden</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:30.262397" elapsed="0.008614"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:30.261248" elapsed="0.009918"/>
+</kw>
+<msg time="2025-07-14T19:36:30.274619" level="INFO">Set timeout to: 10000</msg>
+<tag>HOW TO PAGE</tag>
+<status status="PASS" start="2025-07-14T19:36:29.543118" elapsed="0.728526"/>
+</test>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-07-14T19:36:30.728200" level="INFO">Closed all browsers</msg>
+<arg>ALL</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-14T19:36:30.284139" elapsed="0.444293"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:28.286893" elapsed="2.441644"/>
+</suite>
+<suite id="s1-s4" name="Html-Forms" source="C:\Users\andre\Documents\github\testes_ui_w3schools\tests\html-forms.robot">
+<kw name="Abrir o navegador na página ${URL}" owner="open-browser" type="SETUP" source_name="Abrir o navegador na página ${URL}">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-14T19:36:30.796719" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\andre\\Documents\\github\\testes_ui_w3schools\\browser\\traces\\temp\\d23e6711-3639-4999-94a1-a10d7fb13063"}</msg>
+<msg time="2025-07-14T19:36:31.163204" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\andre\\Documents\\github\\testes_ui_w3schools\\browser\\traces\\temp\\d23e6711-3639-4999-94a1-a10d7fb13063"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-14T19:36:30.794817" elapsed="0.368625"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-07-14T19:36:31.165410" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-07-14T19:36:31.201923" level="INFO">Successfully created context. </msg>
+<msg time="2025-07-14T19:36:31.202045" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-07-14T19:36:31.163722" elapsed="0.038423"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-14T19:36:32.275920" level="INFO">Successfully initialized new page object and opened url: https://www.w3schools.com/html/html_forms.asp</msg>
+<arg>url=${URL}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-14T19:36:31.202401" elapsed="1.073891"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:30.794298" elapsed="1.482399"/>
+</kw>
+<test id="s1-s4-t1" name="Validar &quot;Try it Yourself&quot; em HTML Forms" line="11">
+<kw name="Given estou na página w3schools em HTML Forms" owner="html-forms">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:36:32.419170" level="INFO">Text: 'HTML Forms'</msg>
+<arg>${HTML_LOCATORS.HEADER}</arg>
+<arg>==</arg>
+<arg>${PAGE_MAIN_HEADER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:32.357510" elapsed="0.061971"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:32.356847" elapsed="0.062771"/>
+</kw>
+<kw name="When clico em" owner="html-forms">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:36:32.474859" level="INFO">${LOCATOR} = (//div[@class='w3-example']//a[contains(@class, 'w3-btn') and contains(text(), 'Try it Yourself')])[1]</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${LOCATOR}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:36:32.473491" elapsed="0.001432"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-14T19:36:32.476635" level="INFO">Clicks the element '(//div[@class='w3-example']//a[contains(@class, 'w3-btn') and contains(text(), 'Try it Yourself')])[1]'.</msg>
+<arg>${LOCATOR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:32.475341" elapsed="0.890831"/>
+</kw>
+<arg>Try it Yourself</arg>
+<status status="PASS" start="2025-07-14T19:36:32.472414" elapsed="0.893987"/>
+</kw>
+<kw name="Then uma nova aba deve se abrir contendo uma div para edição e outra para execução HTML" owner="html-forms">
+<kw name="Switch Page" owner="Browser">
+<msg time="2025-07-14T19:36:33.371623" level="INFO">Switching to page NEW,context CURRENT, browser CURRENT</msg>
+<msg time="2025-07-14T19:36:34.098701" level="INFO">Activated new page page=e78d5f9c-fc0c-4957-ab2e-83bbdc9a54e4</msg>
+<arg>NEW</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Switches the active browser page to another open page by ``id`` or ``NEW``.</doc>
+<status status="PASS" start="2025-07-14T19:36:33.370746" elapsed="0.728248"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:34.304535" level="INFO">Waited for Element with selector css=#textarea at state visible</msg>
+<arg>${HTML_LOCATORS.DIV_TO_EDIT}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:34.099361" elapsed="0.205399"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:34.402273" level="INFO">Waited for Element with selector css=#iframe at state visible</msg>
+<arg>${HTML_LOCATORS.DIV_TO_EXECUTION}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:34.305060" elapsed="0.097459"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:33.370139" elapsed="1.032536"/>
+</kw>
+<kw name="When digito o nome &quot;Andre&quot; no campo &quot;First name:&quot;" owner="html-forms" source_name="Digito o nome ${FIRST_NAME} no campo &quot;First name:&quot;">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:34.425164" level="INFO">${FIRST_NAME} = Andre</msg>
+<var>${FIRST_NAME}</var>
+<arg>${FIRST_NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:34.424374" elapsed="0.000845"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-14T19:36:34.425844" level="INFO">${FIRST_NAME} = Andre</msg>
+<arg>${FIRST_NAME}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-14T19:36:34.425463" elapsed="0.000468"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-14T19:36:34.427202" level="INFO">Fills the text 'Andre' in the given field.</msg>
+<arg>${HTML_LOCATORS.INPUT_NAME}</arg>
+<arg>${FIRST_NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:34.426123" elapsed="0.843688"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:34.423782" elapsed="0.846782"/>
+</kw>
+<kw name="And digito o sobrenome &quot;Cunha&quot; no campo &quot;Last name&quot;" owner="html-forms" source_name="Digito o sobrenome ${LAST_NAME} no campo &quot;Last name&quot;">
+<kw name="Replace String" owner="String">
+<msg time="2025-07-14T19:36:35.303933" level="INFO">${LAST_NAME} = Cunha</msg>
+<var>${LAST_NAME}</var>
+<arg>${LAST_NAME}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-07-14T19:36:35.303076" elapsed="0.000916"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-14T19:36:35.304724" level="INFO">${LAST_NAME} = Cunha</msg>
+<arg>${LAST_NAME}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-14T19:36:35.304265" elapsed="0.000539"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-14T19:36:35.307926" level="INFO">Fills the text 'Cunha' in the given field.</msg>
+<arg>${HTML_LOCATORS.INPUT_LAST_NAME}</arg>
+<arg>${LAST_NAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:35.305025" elapsed="0.063460"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:35.301920" elapsed="0.066831"/>
+</kw>
+<kw name="And clico em" owner="html-forms">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-07-14T19:36:35.402925" level="INFO">${LOCATOR} = css=#iframeResult &gt;&gt;&gt; css=input[type="submit"][value="Submit"]</msg>
+<var>${LOCATOR}</var>
+<arg>${MAP_LOCATORS}</arg>
+<arg>${LOCATOR}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-07-14T19:36:35.402493" elapsed="0.000485"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-14T19:36:35.403917" level="INFO">Clicks the element 'css=#iframeResult &gt;&gt;&gt; css=input[type="submit"][value="Submit"]'.</msg>
+<arg>${LOCATOR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:35.403207" elapsed="0.078349"/>
+</kw>
+<arg>Submit</arg>
+<status status="PASS" start="2025-07-14T19:36:35.401892" elapsed="0.080014"/>
+</kw>
+<kw name="Then o formulário deve ser submetido com sucesso" owner="html-forms">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-14T19:36:36.854426" level="INFO">Waited for Element with selector xpath=//iframe[@id="iframeResult"] &gt;&gt;&gt; xpath=//body//div[contains(@class, 'w3-container')] at state visible</msg>
+<arg>${HTML_LOCATORS.RESULT_SUBMIT_FORM}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-14T19:36:35.485610" elapsed="1.369072"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-14T19:36:36.901686" level="INFO">Text: 'fname=Andre&amp;lname=Cunha\xa0'</msg>
+<msg time="2025-07-14T19:36:36.901901" level="INFO">${TEXT_RESULT} = fname=Andre&amp;lname=Cunha </msg>
+<var>${TEXT_RESULT}</var>
+<arg>${HTML_LOCATORS.RESULT_SUBMIT_FORM}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-14T19:36:36.855009" elapsed="0.046946"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TEXT_RESULT}</arg>
+<arg>fname=${FIRST_NAME}&amp;lname=${LAST_NAME}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-07-14T19:36:36.902342" elapsed="0.000818"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:35.485006" elapsed="1.418311"/>
+</kw>
+<msg time="2025-07-14T19:36:36.908886" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-07-14T19:36:36.919255" level="INFO">Switching browser to CURRENT</msg>
+<msg time="2025-07-14T19:36:36.923322" level="INFO">Returned active browser id. CURRENT</msg>
+<msg time="2025-07-14T19:36:36.924335" level="INFO">Switching browser to browser=f70233fa-2546-4d8b-aadc-fccf582095bf</msg>
+<msg time="2025-07-14T19:36:36.928717" level="INFO">Successfully changed active browser: browser=f70233fa-2546-4d8b-aadc-fccf582095bf</msg>
+<msg time="2025-07-14T19:36:36.929240" level="INFO">Switching context to context=890b2abe-43d4-44ee-9227-167f7bf24866 in CURRENT</msg>
+<msg time="2025-07-14T19:36:36.940668" level="INFO">Successfully changed active context: context=890b2abe-43d4-44ee-9227-167f7bf24866</msg>
+<msg time="2025-07-14T19:36:36.940869" level="INFO">Switching to page page=e78d5f9c-fc0c-4957-ab2e-83bbdc9a54e4,context CURRENT, browser CURRENT</msg>
+<msg time="2025-07-14T19:36:36.951898" level="INFO">Successfully changed active page: page=e78d5f9c-fc0c-4957-ab2e-83bbdc9a54e4</msg>
+<msg time="2025-07-14T19:36:36.990226" level="INFO">Successfully closed Page with runBeforeUnload false</msg>
+<tag>HTML PAGE</tag>
+<status status="PASS" start="2025-07-14T19:36:32.276977" elapsed="4.628813"/>
+</test>
+<kw name="Close Browser" owner="Browser" type="TEARDOWN">
+<msg time="2025-07-14T19:36:38.174292" level="INFO">Closed all browsers</msg>
+<arg>ALL</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-14T19:36:37.005929" elapsed="1.168586"/>
+</kw>
+<status status="PASS" start="2025-07-14T19:36:30.766881" elapsed="7.407742"/>
+</suite>
+<status status="PASS" start="2025-07-14T19:35:55.408530" elapsed="42.803415"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">HOME PAGE</stat>
+<stat pass="5" fail="0" skip="0">HOW TO PAGE</stat>
+<stat pass="1" fail="0" skip="0">HTML PAGE</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="9" fail="0" skip="0">Tests</stat>
+<stat name="Home-Page" id="s1-s1" pass="3" fail="0" skip="0">Tests.Home-Page</stat>
+<stat name="How-To-Filter-List" id="s1-s2" pass="4" fail="0" skip="0">Tests.How-To-Filter-List</stat>
+<stat name="How-To-Modal-Boxes" id="s1-s3" pass="1" fail="0" skip="0">Tests.How-To-Modal-Boxes</stat>
+<stat name="Html-Forms" id="s1-s4" pass="1" fail="0" skip="0">Tests.Html-Forms</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

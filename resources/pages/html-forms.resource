@@ -2,8 +2,8 @@
 Library    Browser
 Library    String
 Library    Collections
-Variables    ../locators/html-page-locators.yaml
-Resource     ../utils/open-browser.resource
+Resource   ../locators/html-page-locators.resource
+Resource   ../utils/open-browser.resource
 *** Variables ***
 ${PAGE_MAIN_HEADER}     HTML Forms
 

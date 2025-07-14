@@ -1,7 +1,7 @@
 *** Settings ***
 Library    Browser
-Variables    ../locators/how-to-page-locators.yaml
-Resource     ../utils/open-browser.resource
+Resource   ../locators/how-to-page-locators.resource
+Resource   ../utils/open-browser.resource
 *** Variables ***
 ${PAGE_MAIN_HEADER}     How TO - CSS/JS Modal
 

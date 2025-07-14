@@ -1,11 +1,11 @@
 *** Settings ***
 Library     Browser
 Library     String
-Library    Collections
+Library     Collections
 Resource    ../utils/open-browser.resource
-Variables   ../locators/home-page-locators.yaml
-Variables   ../locators/how-to-page-locators.yaml
-Variables   ../locators/html-page-locators.yaml
+Resource    ../locators/home-page-locators.resource
+Resource    ../locators/how-to-page-locators.resource
+Resource    ../locators/html-page-locators.resource
 
 *** Variables ***
 ${HOME_PAGE_HEADER}        Learn to Code

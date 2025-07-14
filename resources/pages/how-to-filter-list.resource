@@ -1,8 +1,8 @@
 *** Settings ***
 Library    Browser
 Library    String
-Variables    ../locators/how-to-page-locators.yaml
-Resource     ../utils/open-browser.resource
+Resource   ../locators/how-to-page-locators.resource
+Resource   ../utils/open-browser.resource
 *** Variables ***
 ${PAGE_MAIN_HEADER}     How TO - Filter/Search List
 @{NAMES_LIST}=    Adele    Billy    Cindy
