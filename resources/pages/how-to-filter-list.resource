@@ -1,15 +1,18 @@
 *** Settings ***
-Library    Browser
-Library    String
-Resource   ../locators/how-to-page-locators.resource
-Resource   ../utils/open-browser.resource
+Library     Browser
+Library     String
+Resource    ../locators/how-to-page-locators.resource
+Resource    ../utils/open-browser.resource
+
+
 *** Variables ***
 ${PAGE_MAIN_HEADER}     How TO - Filter/Search List
-@{NAMES_LIST}=    Adele    Billy    Cindy
+@{NAMES_LIST}=          Adele    Billy    Cindy
+
 
 *** Keywords ***
 Estou na página w3schools em Filter List
-    Get Text    ${HOW_TO_LOCATORS.HEADER}  ==  ${PAGE_MAIN_HEADER}
+    Get Text    ${HOW_TO_LOCATORS.HEADER}    ==    ${PAGE_MAIN_HEADER}
 
 Digito ${NAME} no campo "Search for names..."
     ${NAME}=    Replace String    ${NAME}    "    ${EMPTY}
@@ -34,7 +37,7 @@ Tres nomes validos devem estar listados
         ${LOCATOR}=    Replace String    ${LOCATOR}    name    ${NAME}
         Wait For Elements State    ${locator}    visible
     END
-    
+
 Tres nomes validos devem ser encontrados
     FOR    ${NAME}    IN    @{NAMES_LIST}
         Digito ${NAME} no campo "Search for names..."
