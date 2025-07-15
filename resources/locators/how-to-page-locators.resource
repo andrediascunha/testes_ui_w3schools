@@ -5,6 +5,9 @@
 ...                     HEADER=xpath=//*[@id="main"]//h1
 # Modal Boxes
 ...                     MODAL_BOXES_OPTION=xpath=//a[@class="no-checkmark" and @href="howto_css_modals.asp"]
+...                     MODAL_BOXES_MODAL_HEADER=xpath=//*[@id="id01"]/div/header/h2
+...                     MODAL_BOXES_MODAL_CONTENT=xpath=//*[@id="id01"]/div/div/p[1]
+...                     MODAL_BOXES_MODAL_FOOTER=xpath=//*[@id="id01"]/div/footer/p
 ...                     MAIN_OPEN_MODAL_BUTTON=xpath=//*[@id="main"]//button
 ...                     MAIN_CLOSE_MODAL_BUTTON=xpath=//*[@id="id01"]/div/header/span
 # Filter List

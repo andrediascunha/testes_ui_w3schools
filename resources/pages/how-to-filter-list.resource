@@ -17,7 +17,6 @@ Estou na página w3schools em Filter List
 Digito ${NAME} no campo "Search for names..."
     ${NAME}=    Replace String    ${NAME}    "    ${EMPTY}
     Type Text    ${HOW_TO_LOCATORS.FILTER_LIST_SEARCH}    ${NAME}
-    Sleep    2
 
 a lista deve exibir o nome ${NAME}
     ${NAME}=    Replace String    ${NAME}    "    ${EMPTY}

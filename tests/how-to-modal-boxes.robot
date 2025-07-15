@@ -14,6 +14,6 @@ Validar abertura e fechamento de modal em Modal Boxes
     [Tags]    how to page
     Given estou na página w3schools em Modal Boxes
     When clico no em "Open Modal"
-    Then o modal deve ser exibido com opção para fechamento
+    Then o modal deve ser exibido
     When clico em "Close modal"
     Then o modal deve ser fechado
